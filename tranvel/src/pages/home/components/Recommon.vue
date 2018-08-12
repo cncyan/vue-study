@@ -2,7 +2,7 @@
 <div>
   <div class="title-recommon">重要重要</div>
   <ul class="itme-contianer">
-    <li class="item" v-for="item in recommontlists" :key="item.id">
+    <li class="item" v-for="item in list" :key="item.id">
       <div class="itme-wraperimg">
         <img class="item-img" :src="item.imgUrl"/>
       </div>
@@ -19,22 +19,11 @@
 <script>
 export default {
   name: "Recommon",
+  props:{
+    list:Array
+  },
   data(){
     return{
-      recommontlists:[
-        {
-          id:'0001',
-          imgUrl:'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-          title:'上海迪士尼乐园',
-          desc:'那些课教案设计的把控十点半漫长历史的可能放假'
-        },
-        {
-          id:'0002',
-          imgUrl:'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg',
-          title:'上海迪士尼乐园',
-          desc:'那些课教案设计的把控十点半漫长历史的可能放假'
-        }
-      ]
     }
   }
 }
