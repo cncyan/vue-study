@@ -4,7 +4,7 @@
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题</div>
-    <div class="header-right">城市<span class="iconfont arrow-icon">&#58954;</span></div>
+    <router-link to="city"> <div class="header-right">{{this.$store.state.city}}<span class="iconfont arrow-icon">&#58954;</span></div></router-link>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
   @import '~styles/varibles.styl'
   .header
     display:flex
-    line-height:.86rem
+    line-height:$headerHeight
     background:$bgColor
     color:#ffffff
     .header-left
@@ -42,6 +42,7 @@ export default {
       width:1.24rem
       float:right
       text-align:center
+      color:#ffffff
       .arrow-icon
         font-size:.24rem
 </style>
